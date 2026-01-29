@@ -1,1 +1,34 @@
+@startuml
+title The Galactic Centre Model — Orbits (Debt & Survivability)
+left to right direction
+skinparam shadowing false
+
+rectangle "INWARD DRIFT (inevitable)\nDebt accumulation / coupling / constraint" as IN #White
+rectangle "OUTWARD DRIFT (intentional)\nDebt repayment / seams / reversibility" as OUT #White
+
+cloud "Galactic Centre\n(core capabilities increase gravity)\nLedger • Identity • Eligibility • Audit" as GC
+
+rectangle "Core\nDense, governed truth\nHigh cost, bounded risk" as CORE
+rectangle "Stable Orbit\nSustainable structure\nExplicit seams" as STABLE
+rectangle "Managed Orbit\nInterest-bearing debt\nGuardrails + expiry" as MANAGED
+rectangle "Drift Orbit\nHigh-interest debt\nFlags + hidden coupling" as DRIFT
+rectangle "Collapse Orbit\nUnpayable debt\nUnsafe to change" as COLLAPSE
+
+GC --> CORE
+CORE --> STABLE
+STABLE --> MANAGED
+MANAGED --> DRIFT
+DRIFT --> COLLAPSE
+
+note right of GC
+Core capabilities increase pull.
+This is intentional: heavier but survivable.
+end note
+
+note bottom
+Inward drift is the default.
+Outward drift requires effort.
+Failure occurs when inward drift outpaces outward capacity.
+end note
+@enduml
 
