@@ -1,160 +1,99 @@
-How Architectural Principles (APs) and Kaizen Work Together
-The Short Version
+# Architectural Principles (APs) and Kaizen
 
-Architectural Principles (APs) set the rules of the system
+## Purpose
 
-Kaizen improves things within those rules
+Architectural Principles (APs) and Kaizen work together to control change within the Galaxy Centre / Centre of Gravity model. APs define deliberate constraints, while Kaizen enables continuous improvement within those constraints. This document exists to prevent inward drift, avoid architectural change by stealth, and enable improvement without destabilising core capabilities.
 
-ADRs change the rules deliberately
+This is not a process document. It is a control model for change.
 
-Drift is inevitable — direction is a choice
+---
 
-If you remember nothing else, remember this:
+## Architectural Principles (APs)
 
-APs decide where we are allowed to be.
-Kaizen keeps us safely in orbit.
+APs define the fundamental constraints of the system. They are opinionated by design, applied unevenly depending on criticality, and fixed at a point in time. Their purpose is to prevent accidental centralisation, protect core capabilities, and make trade-offs explicit so they do not need to be re-litigated repeatedly.
 
-What Architectural Principles Are
-
-APs are:
-
-Explicit constraints
-
-Opinionated by design
-
-Applied unevenly depending on criticality
-
-Fixed at a point in time
-
-They exist to:
-
-Prevent accidental centralisation
-
-Protect core capabilities
-
-Make trade-offs explicit
-
-Reduce re-litigation of fundamentals
-
-What APs Are Not
+### What APs Are Not
 
 APs are not:
-
-Living documents
-
-Consensus artefacts
-
-Best-practice lists
-
-Continuously revised guidance
+- Living documents
+- Consensus artefacts
+- Best-practice lists
+- Continuously revised guidance
 
 They represent a deliberate position in time.
 
-What Kaizen Is (Here)
+---
 
-Kaizen is:
+## Kaizen
 
-Continuous improvement
+Kaizen is the practice of continuous, local improvement. In this model, Kaizen is always bounded, directional, and subordinate to APs. It exists to improve quality, reduce risk, simplify implementations, and expose technical or architectural pressure.
 
-Local and incremental
+Kaizen does not exist to change system direction, redefine boundaries implicitly, bypass APs “just this once”, or introduce new gravity silently.
 
-Reversible
+---
 
-Always subordinate to APs
+## The Galaxy Centre Model
 
-Kaizen is used to:
+The system is viewed as a galaxy of capabilities organised by gravitational pull.
 
-Improve quality
+- **Centre (Core Capabilities)**  
+  High criticality, high blast radius, high cost of change
 
-Reduce risk
+- **Inner Orbits**  
+  Important but non-foundational capabilities, susceptible to inward drift
 
-Simplify implementations
+- **Outer Orbits**  
+  Low-gravity, fast-moving, often short-lived capabilities
 
-Expose technical and architectural pressure
+---
 
-Kaizen is not used to:
+## Kaizen by Orbit
 
-Change system direction
+### Centre / Core Capabilities
 
-Redefine boundaries implicitly
+Kaizen near the centre is conservative and risk-first. It focuses on stability, correctness, observability, performance, and risk reduction. Structural change or semantic behaviour change requires an explicit architectural decision.
 
-Bypass APs “just this once”
+### Inner Orbits
 
-Introduce new gravity silently
+Kaizen in the inner orbits is boundary-focused. It aims to reduce coupling, clarify ownership, improve deployability, and actively resist inward drift. This is where Kaizen often surfaces architectural pressure.
 
-Kaizen by Orbit (Galaxy Model)
-Orbit	AP Strength	Kaizen Style	Focus
-Centre / Core	Strong	Conservative	Stability, correctness, risk
-Inner Orbits	Directional	Boundary-focused	Prevent inward drift
-Outer Orbits	Light	Fast & experimental	Learning, speed
+### Outer Orbits
 
-The closer you are to the centre, the more careful Kaizen must be.
+Kaizen in the outer orbits is fast, experimental, and disposable. Constraints are minimal, blast radius is small, and learning is prioritised over permanence.
 
-Drift and Improvement
+---
 
-All systems drift inwards over time
+## Drift and Direction
 
-Kaizen alone does not prevent this
+All systems drift inward over time. Kaizen alone does not prevent this. Unchecked Kaizen can accelerate drift by making the centre increasingly attractive and strengthening accidental dependencies.
 
-APs give Kaizen direction
+APs give Kaizen direction. Outward drift is always deliberate and costly, and Kaizen exists to pay that cost incrementally.
 
-Unchecked Kaizen can:
+---
 
-Strengthen the centre accidentally
+## Kaizen vs Architecture
 
-Increase coupling
+A clear boundary exists between improvement and direction:
 
-Raise future change cost
+**Kaizen stops where direction changes begin.**
 
-Kaizen aligned with APs:
+Kaizen is local, incremental, and reversible. Architectural decisions, expressed through ADRs or new APs, are directional, deliberate, and irreversible.
 
-Pays down debt deliberately
+When Kaizen repeatedly hits an AP boundary, that friction is a signal. The outcome is an ADR or a new or replacement AP, not erosion by exception.
 
-Prepares systems for extraction
+---
 
-Keeps gravity intentional
+## Changing or Adding APs
 
-Kaizen vs Architecture
+Architectural Principles are never edited in place. They are changed only through deliberate replacement or versioning. Old principles remain as historical record.
 
-Clear boundary:
+Kaizen may surface the need for change, but it does not authorise it.
 
-Kaizen stops where direction changes begin.
+---
 
-Kaizen → local, reversible improvements
+## Summary
 
-APs / ADRs → deliberate, directional decisions
+APs define gravitational constraints. Kaizen enables safe movement within them. Gravity is deliberate, not accidental. Drift is inevitable; direction is a choice.
 
-If Kaizen repeatedly hits an AP:
-
-That’s a signal
-
-The outcome is an ADR or new AP
-
-Not erosion by exception
-
-Changing or Adding APs (In Brief)
-
-APs are never edited in place
-
-They are replaced or versioned
-
-Old APs remain as historical record
-
-Kaizen can surface the need for change —
-it cannot authorise it.
-
-Why This Matters
-
-This model:
-
-Enables improvement without chaos
-
-Makes “no” principled, not personal
-
-Keeps core systems stable
-
-Keeps edge systems fast
-
-Removes architecture-by-stealth
-
-It replaces process with intentional control.
+**Architectural Principles decide where we are allowed to be.  
+Kaizen keeps us safely in orbit.**
