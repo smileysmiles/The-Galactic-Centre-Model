@@ -78,6 +78,18 @@ If nothing is actively pushing outward, the system moves inward by default.
 
 ---
 
+### Core capability vs technical debt
+
+These are related but distinct concepts.
+
+- **Core capability** describes where consequence and gravity exist by nature.
+- **Technical debt** describes how effectively that gravity is managed.
+
+A capability can be core with little debt, or non-core with significant debt.
+Failure occurs when high-consequence capabilities accumulate unmanaged debt faster than structure is introduced.
+
+---
+
 ## The Role of the Core (Economic Framing)
 
 A capability becomes **core** when the **cost of failure exceeds the cost of rebuilding it greenfield**.
@@ -111,7 +123,7 @@ Making a capability core-
 
 This is **intentional**.
 
-> **Core capabilities increase gravity because the cost of failure is high — therefore we invest more upfront to keep them in a safe orbit.**
+**Core capabilities increase gravity because the cost of failure is high — therefore we invest more upfront to keep them in a safe orbit.**
 
 The additional work is the price paid to ensure that-
 - change remains cheaper than rebuild
