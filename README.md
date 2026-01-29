@@ -4,7 +4,7 @@
 
 This is a **model**, not a plan.
 
-It is a lens for reasoning about how systems evolve under sustained pressure:
+It is a lens for reasoning about how systems evolve under sustained pressure-
 - how debt accumulates
 - why reversibility is lost
 - when refactoring stops being rational
@@ -14,9 +14,9 @@ It is a lens for reasoning about how systems evolve under sustained pressure:
 
 ## Why this exists
 
-Most technology transformation is framed around a **North Star**: a clean future state that teams are encouraged to move towards.
+Most technology transformation is framed around a **North Star**- a clean future state that teams are encouraged to move towards.
 
-That framing breaks down in long-lived, regulated, high-risk systems because it ignores the forces that dominate reality:
+That framing breaks down in long-lived, regulated, high-risk systems because it ignores the forces that dominate reality-
 - transactions and money
 - regulatory scrutiny
 - audit and evidence
@@ -35,7 +35,7 @@ This model replaces directional aspiration with **economic and structural realis
 In astrophysics, the galactic centre is not a destination.  
 It is a **source of gravity**.
 
-Applied to software systems:
+Applied to software systems-
 
 - **Inward drift is inevitable**  
   Complexity, coupling, and constraint accumulate over time.
@@ -53,7 +53,7 @@ Architecture is therefore about **managing orbit**, not resisting pull.
 ## Inward drift vs outward drift
 
 ### Inward drift (inevitable)
-Inward drift happens naturally as:
+Inward drift happens naturally as-
 - correctness requirements increase
 - dependencies multiply
 - regulation tightens
@@ -67,7 +67,7 @@ It is maturation plus entropy.
 ### Outward drift (intentional)
 Outward drift is **work**.
 
-It only happens when teams:
+It only happens when teams-
 - pay down debt
 - introduce seams
 - reduce coupling
@@ -84,13 +84,13 @@ A capability becomes **core** when the **cost of failure exceeds the cost of reb
 
 This is an economic distinction, not a technical one.
 
-Typical core capabilities include:
+Typical core capabilities include-
 - transactions and balances
 - identity and eligibility
 - audit and regulatory evidence
 - canonical customer data
 
-In these areas, mistakes are:
+In these areas, mistakes are-
 - highly visible
 - difficult or impossible to unwind
 - widely coupled
@@ -103,7 +103,7 @@ It defers it.
 
 ### Deliberate core increases gravity — intentionally
 
-Making a capability core:
+Making a capability core-
 - increases gravitational pull
 - raises change cost
 - attracts dependencies
@@ -113,21 +113,21 @@ This is **intentional**.
 
 > **Core capabilities increase gravity because the cost of failure is high — therefore we invest more upfront to keep them in a safe orbit.**
 
-The additional work is the price paid to ensure that:
+The additional work is the price paid to ensure that-
 - change remains cheaper than rebuild
 - reversibility is preserved
 - risk is explicit and governed
 
 ---
 
-## Orbits: debt and survivability
+## Orbits- debt and survivability
 
 Think in **orbits**, not maturity levels.
 
 ### ⚫ Core — dense, governed truth
 Where inevitability belongs.
 
-Characteristics:
+Characteristics-
 - immutable history (ledger, audit)
 - explicit constraints (eligibility, not flags)
 - encrypted canonical data
@@ -140,7 +140,7 @@ The core increases pull but **preserves reversibility**.
 ### 🟢 Stable orbit — safe operation
 Where systems can live long-term.
 
-Traits:
+Traits-
 - explicit seams
 - asynchronous handling of uncertainty
 - events as facts, not commands
@@ -153,7 +153,7 @@ This is the target state for most platform capability.
 ### 🟡 Managed orbit — interest-bearing debt
 Viable, but requires discipline.
 
-Traits:
+Traits-
 - tactical shortcuts
 - controlled duplication
 - synchronous paths with guardrails
@@ -165,7 +165,7 @@ Acceptable only while outward drift remains affordable.
 ### 🟠 Drift orbit — high-interest debt
 Feels productive; debt compounds silently.
 
-Traits:
+Traits-
 - flags encoding business rules
 - hidden coupling
 - automation compensating for structure
@@ -176,7 +176,7 @@ Traits:
 ### 🔴 Collapse orbit — unpayable debt
 Systems become unsafe to change.
 
-Symptoms:
+Symptoms-
 - refactoring increases risk
 - incidents trigger regressions
 - audit becomes forensic
@@ -184,17 +184,17 @@ Symptoms:
 
 ---
 
-## Event Horizon: economic irreversibility
+## Event Horizon- economic irreversibility
 
 The **event horizon** is a cost threshold, not a proximity warning.
 
 > **The event horizon is crossed when the cost of reversing past decisions exceeds the cost of rebuilding the capability.**
 
-Before the horizon:
+Before the horizon-
 - refactoring is painful but rational
 - incremental improvement is viable
 
-After the horizon:
+After the horizon-
 - fixing “properly” is no longer incremental
 - only isolation, strangulation, or replacement makes sense
 
@@ -214,7 +214,7 @@ Failure cost exceeds greenfield rebuild cost.
 - side stores “for performance”  
 - scattered validation  
 
-Result: hidden coupling and accelerated drift.
+Result- hidden coupling and accelerated drift.
 
 **Safe orbit (centre-aware)**  
 - single append-only ledger  
@@ -236,7 +236,7 @@ Decisions must be explainable after the fact.
 - flags for edge cases  
 - duplicated rules  
 
-Result: audit archaeology.
+Result- audit archaeology.
 
 **Safe orbit (centre-aware)**  
 - compliance emits facts  
@@ -263,7 +263,7 @@ RPA is not the cause — it is a **signal that the event horizon was crossed ear
 
 Good architecture does **not** prevent inward drift.
 
-It:
+It-
 - accepts that core capabilities increase gravity
 - introduces structure early
 - lowers the cost of outward drift near the centre
@@ -276,7 +276,7 @@ It:
 
 ## How to use this model
 
-Ask:
+Ask-
 - Is this increasing inward pull without lowering outward cost?
 - Are we investing enough to release this capability into a safe orbit?
 - Is outward drift still cheaper than rebuild?
