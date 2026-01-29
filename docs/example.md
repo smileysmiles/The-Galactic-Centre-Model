@@ -1,6 +1,6 @@
-# Worked Example: Transactions, Compliance, and the Event Horizon
+# Worked Example - Transactions, Compliance, and the Event Horizon
 
-This example walks through a familiar capability — **transactions** — using the Galactic Centre Model to show:
+This example walks through a familiar capability — **transactions** — using the Galactic Centre Model to show
 - inward drift
 - outward drift
 - core gravity
@@ -10,9 +10,9 @@ The goal is not to propose an implementation, but to demonstrate how the model e
 
 ---
 
-## Starting point: a simple transaction flow
+## Starting point - A simple transaction flow
 
-Initial design (early life, low gravity):
+Initial design (early life, low gravity)
 
 - User performs an action
 - Service validates input
@@ -20,7 +20,7 @@ Initial design (early life, low gravity):
 - Compliance checks are synchronous
 - Errors are returned immediately
 
-At this stage:
+At this stage
 - coupling is low
 - change is cheap
 - refactoring is viable
@@ -32,7 +32,7 @@ The system sits in a **managed orbit**.
 
 ## Inward drift begins (inevitable)
 
-Over time, pressure increases:
+Over time, pressure increases
 
 - transaction volume grows
 - regulatory requirements expand
@@ -40,7 +40,7 @@ Over time, pressure increases:
 - reconciliation becomes important
 - downstream systems depend on balances
 
-Natural responses:
+Natural responses
 - more validation logic added inline
 - compliance rules embedded in the flow
 - flags introduced for exceptions
@@ -52,24 +52,24 @@ No failure yet.
 
 ---
 
-## Core decision: transactions become a first-class capability
+## Core decision transactions become a first-class capability
 
-At some point, the organisation recognises:
+At some point, the organisation recognises
 
 > Transactions are too important to be implicit.
 
-A deliberate decision is made to introduce a **ledger**:
+A deliberate decision is made to introduce a **ledger**
 - append-only transaction history
 - derived balances
 - immutable records
 - auditable timelines
 
-This **increases gravitational pull**:
+This **increases gravitational pull**
 - more systems depend on it
 - change cost rises
 - correctness requirements harden
 
-But it also:
+But it also
 - collapses ambiguity
 - makes truth explicit
 - reduces hidden coupling
@@ -83,19 +83,19 @@ This is **good architecture**.
 
 ## The trade-off becomes visible
 
-Now every change involving transactions:
+Now every change involving transactions
 - feels heavier
 - requires more care
 - needs migration or compensation logic
 - has audit implications
 
-This is where many teams panic and attempt to reduce pull by:
+This is where many teams panic and attempt to reduce pull by
 - duplicating balances
 - creating side stores
 - bypassing the ledger “just for performance”
 - introducing automation to sync systems
 
-These actions **appear to reduce gravity**, but actually:
+These actions **appear to reduce gravity**, but actually
 - increase hidden coupling
 - accelerate inward drift elsewhere
 - raise the interest rate on debt
@@ -108,7 +108,7 @@ This is **deceptive progress**.
 
 ## Outward drift done properly (debt repayment)
 
-A centre-aware approach instead invests in **outward drift near the core**:
+A centre-aware approach instead invests in **outward drift near the core**
 
 - strict ownership of the ledger
 - derived read models for performance
@@ -116,7 +116,7 @@ A centre-aware approach instead invests in **outward drift near the core**:
 - asynchronous compliance evaluation
 - eligibility used to constrain participation rather than block transactions
 
-These actions:
+These actions
 - do not reduce gravity
 - but **reduce the cost of change near it**
 - preserve reversibility
@@ -129,18 +129,18 @@ The system stabilises in a **safe orbit close to the centre**.
 
 Contrast with the alternative path.
 
-Over time:
+Over time
 - transaction logic is spread across services
 - compliance rules are duplicated
 - balances exist in multiple places
 - automation reconciles inconsistencies
 - refactors require coordinated, risky change
 
-Eventually, teams reach the point where:
+Eventually, teams reach the point where
 
 > Fixing the transaction model properly would require a full rewrite.
 
-At this moment:
+At this moment
 - refactoring is no longer rational
 - wrappers and isolation dominate
 - “don’t touch it” zones appear
@@ -169,7 +169,7 @@ it was **failing to invest in outward drift early enough**.
 > **Core capabilities make systems heavier.  
 > Architecture exists to make that weight survivable.**
 
-The Galactic Centre Model explains why:
+The Galactic Centre Model explains why
 - ledgers beat flags
 - eligibility beats synchronous gating
 - events beat orchestration
