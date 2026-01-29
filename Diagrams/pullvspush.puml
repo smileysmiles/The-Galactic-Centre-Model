@@ -1,0 +1,23 @@
+@startuml
+title Pull vs Push — Event Horizon as Economic Irreversibility
+skinparam shadowing false
+
+rectangle "Inward pull (debt accumulation)\nRate increases with coupling/complexity" as PULL
+rectangle "Outward push (debt repayment)\nCapacity depends on structure + delivery bandwidth" as PUSH
+rectangle "Event Horizon\nReversal cost > rebuild cost\n(irreversibility threshold)" as EH
+
+PULL --> EH : If pull rate outpaces push
+PUSH --> EH : If push capacity falls
+
+note right of EH
+Crossed when:
+- reversal cost exceeds rebuild
+- refactor becomes irrational
+- only isolation/replace makes sense
+end note
+
+note bottom
+Good architecture reduces the cost-per-unit of outward push,
+especially near core capabilities where pull is strongest.
+end note
+@enduml
